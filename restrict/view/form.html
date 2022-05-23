@@ -1,0 +1,25 @@
+<form method="POST" action="?class=Form&method=salvar">
+  <input type="hidden" name="id" value="{id}" />
+  <div>
+    <label for="marca">Marca: </label>
+    <input type="text" name="marca" id="marca" required value="{marca}" />
+  </div>
+  <div>
+    <label for="config">Configuração: </label>
+    <textarea name="configuracao" id="config" required>{configuracao}</textarea>
+  </div>
+  <div>
+    <label for="valor">Valor: </label>
+    <input
+      type="number"
+      step="0.01"
+      name="valor"
+      id="valor"
+      required
+      value="{valor}"
+    />
+  </div>
+  <div>
+    <button type="submit">Salvar</button>
+  </div>
+</form>
