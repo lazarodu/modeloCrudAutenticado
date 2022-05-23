@@ -1,8 +1,6 @@
 <?php
-
-// spl_autoload_register(null, false);
+// auto load
 spl_autoload_extensions(".php");
-
 function classLoader($class)
 {
     $nomeArquivo = $class . ".php";
@@ -19,9 +17,10 @@ function classLoader($class)
         }
     }
 }
-
 spl_autoload_register("classLoader");
-
+Session::startSession();
+Session::freeSession();
+// Front Controller
 class Aplicacao
 {
     static private  $app = "/modelo";
